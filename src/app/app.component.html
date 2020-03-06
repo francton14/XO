@@ -1,0 +1,19 @@
+<div class="body">
+  <header>
+    <ng-container [ngSwitch]="boardStatus.status">
+      <h1 *ngSwitchCase="statusMapper.ONGOING">{{ xoMapper[xo] }}'s turn to move.</h1>
+      <h1 *ngSwitchCase="statusMapper.WIN">{{ xoMapper[boardStatus.winner] }} won!</h1>
+      <h1 *ngSwitchCase="statusMapper.DRAW">Draw!</h1>
+    </ng-container>
+  </header>
+  <div class="play-area">
+    <ng-container *ngFor="let tile of board; let i = index">
+      <app-tile [symbol]="xoMapper[board[i]]" (click)="onTileClick(i)"></app-tile>
+    </ng-container>
+  </div>
+  <footer>
+    <button (click)="newGame()">
+      {{ boardStatus.status === statusMapper.ONGOING ? 'Restart' : 'New Game' }}
+    </button>
+  </footer>
+</div>

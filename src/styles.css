@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Lobster&display=swap');
+
+body {
+  height: 100vh;
+  background: #2f3640;
+  margin: 0 !important;
+}

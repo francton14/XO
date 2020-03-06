@@ -1,0 +1,65 @@
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  color: #fbc531;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer button {
+  background: #fbc531;
+  border: 5px solid transparent;
+  border-radius: 25px;
+  color: #2f3640;
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  padding: 5px 40px;
+  outline: 0;
+}
+
+footer button:hover {
+  background: transparent;
+  color: #fbc531;
+  border: 5px solid #fbc531;
+}
+
+div.play-area {
+  grid-area: play-area;
+  display: grid;
+  padding: 10px;
+  background: #353b48;
+  border-radius: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+div.winner-dialog {
+
+}
+
+div.body {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 500px auto;
+  grid-template-rows: 110px 500px auto;
+  grid-template-areas:
+    "header header header"
+    ". play-area ."
+    "footer footer footer";
+}

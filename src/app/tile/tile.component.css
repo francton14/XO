@@ -1,0 +1,16 @@
+button {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: 5px solid #9c88ff;
+  border-radius: 25px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 5em;
+  color: #f5f6fa;
+  padding: 0 !important;
+  outline: none;
+}
+
+button:active {
+  background: #9c88ff;
+}
